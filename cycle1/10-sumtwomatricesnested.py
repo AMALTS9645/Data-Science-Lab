@@ -1,15 +1,27 @@
-x = [[1,12,2],
-     [4,5,12],
-     [8,10,15]]
-y = [[1,12,2],
-     [4,5,12],
-     [8,10,15]]
-res = [[0,0,0],
-       [0,0,0],
-       [0,0,0]]
+matOne = []
+print("Enter 9 Elements for First Matrix: ")
+for i in range(3):
+    matOne.append([])
+    for j in range(3):
+        num = int(input())
+        matOne[i].append(num)
 
-for i in range(len(x)):
-  for j in range(len(x[0])):
-    res[i][j] = x[i][j] + y[i][j]
-for r in res:
-  print(r)
+matTwo = []
+print("Enter 9 Elements for Second Matrix: ")
+for i in range(3):
+    matTwo.append([])
+    for j in range(3):
+        num = int(input())
+        matTwo[i].append(num)
+
+matThree = []
+for i in range(3):
+    matThree.append([])
+    for j in range(3):
+        matThree[i].append(matOne[i][j]+matTwo[i][j])
+
+print("\nAddition Result of Two Given Matrix is:")
+for i in range(3):
+    for j in range(3):
+        print(matThree[i][j], end=" ")
+    print()
